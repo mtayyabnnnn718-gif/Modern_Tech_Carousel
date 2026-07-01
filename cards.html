@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Cards Carousel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.carousel-container {
+  width: 90%;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #38bdf8;
+  letter-spacing: 1px;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: #38bdf8;
+  border-radius: 10px;
+}
+
+.card {
+  min-width: 260px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 16px;
+  padding: 20px;
+  scroll-snap-align: start;
+  transition: 0.3s ease;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+}
+
+.card h3 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.4;
+}
+</style>
+<body>
+
+  <div class="carousel-container">
+    <h2 class="title">Modern Tech Carousel</h2>
+
+    <div class="carousel">
+
+      <div class="card">
+        <h3>AI Solutions</h3>
+        <p>Next-gen artificial intelligence systems for automation.</p>
+      </div>
+
+      <div class="card">
+        <h3>Cloud Computing</h3>
+        <p>Scalable and secure cloud infrastructure services.</p>
+      </div>
+
+      <div class="card">
+        <h3>Cyber Security</h3>
+        <p>Advanced protection for digital assets and data.</p>
+      </div>
+
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>Modern responsive websites with latest technologies.</p>
+      </div>
+
+      <div class="card">
+        <h3>Data Science</h3>
+        <p>Data-driven insights for smarter business decisions.</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
